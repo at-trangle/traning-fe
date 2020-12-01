@@ -75,7 +75,10 @@ img {
 /* header */
 .header-top {
   background-color: #dddddd;
-  padding: 15px;
+  padding: 10px 15px;
+}
+.header-top .logo img {
+  width: 150px;
 }
 .header-top .header-actions li {
   margin-left: 15px;
