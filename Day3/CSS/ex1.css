@@ -1,0 +1,27 @@
+input[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  margin-right: 20px;
+}
+input[type="checkbox"]:checked::after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 5px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  transform: rotate(135deg);
+  top: -8px;
+  left: 2px;
+}
+input[type="checkbox"]::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
+  transform: translateY(-65%);
+}
