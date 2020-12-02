@@ -46,9 +46,9 @@
     <div class="wrapper">
       <section class="section-slideshow">
         <ul class="slide-shows">
-          <li class="mySlides"><img src="./images/slideshow_1.jpg" alt=""></li>
-          <li class="mySlides"><img src="./images/slideshow_2.jpg" alt=""></li>
-          <li class="mySlides"><img src="./images/slideshow_3.jpg" alt=""></li>
+          <li class="slide-item"><img src="./images/slideshow_1.jpg" alt=""></li>
+          <li class="slide-item"><img src="./images/slideshow_2.jpg" alt=""></li>
+          <li class="slide-item"><img src="./images/slideshow_3.jpg" alt=""></li>
         </ul>
         <div class="slide-acions d-flex justify-between">
           <button class="btn btn-previous" onclick="plusDivs(-1)"><i class="fa fa-chevron-left"></i></button>
@@ -313,7 +313,7 @@
 
     function showDivs(n) {
       var i;
-      var x = document.getElementsByClassName("mySlides");
+      var x = document.getElementsByClassName("slide-item");
       if (n > x.length) {slideIndex = 1}
       if (n < 1) {slideIndex = x.length}
       for (i = 0; i < x.length; i++) {
