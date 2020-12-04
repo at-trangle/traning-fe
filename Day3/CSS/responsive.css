@@ -1,0 +1,46 @@
+* {
+  font-family: arialmt;
+}
+/* screen size
+lg: large (<= 1024px)
+md: medium (<= 768px)
+sm: small (<= 480px) */
+@media (min-width: 1024px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .header-nav .header-menu {
+    display: none;
+  }
+  .header-nav .header-menu-mobile {
+    display: block;
+  }
+  .section-banner-txt h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  .section-newsletter > div {
+    display: block;
+  }
+  .section-newsletter .newsletter-form {
+    margin-bottom: 15px;
+  }
+  .section-newsletter .form-input-group {
+    width: calc(100% - 80px);
+  }
+  .section-newsletter .form-input-group input {
+    width: 100%;
+  }
+  .section-newsletter .socials {
+    justify-content: center;
+  }
+  .footer-col {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
