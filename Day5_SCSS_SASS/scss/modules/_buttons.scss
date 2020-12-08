@@ -1,0 +1,49 @@
+.btn {
+  font-family: map-get($font-family, montserrat);
+  @include pxRem(font-size, 12);
+  width: 100%;
+  text-transform: uppercase;
+  &:hover {
+    transition: all 0.25s;
+    border: none;
+    text-shadow: none;
+  }
+}
+.btn-outline-gray {
+  background-color: map-get($colors, white);
+  color: map-get($colors, border-gray);
+  border: 2px solid map-get($color, border-gray);
+  &:hover {
+    background-color: map-get($colors, border-gray);
+    color: map-get($colors, white);
+    border: 2px solid map-get($color, border-gray);
+  }
+}
+.btn-violet {
+  background-color: map-get($colors, violet);
+  color: map-get($colors, white);
+  &:hover {
+    background-color: map-get($colors, danger);
+  }
+}
+.btn-white {
+  @include pxRem(font-size, 13);
+  @include pxRem(letter-spacing, 2);
+  color: map-get($colors, gray);
+  padding: 15px 25px;
+  background-color: map-get($colors, white);
+  transition: all 0.5s ease 0s;
+  font-weight: bold;
+  &:hover {
+    color: map-get($colors, white);
+    background-color: map-get($colors, violet);
+    text-decoration: none;
+  }
+}
+.btn-black {
+  color: map-get($colors, white);
+  background-color: map-get($colors, black-a);
+  &:hover {
+    background-color: map-get($colors, violet);
+  }
+}
