@@ -1,0 +1,32 @@
+.product-item {
+  position: relative;
+  animation-duration: 1.5s;
+  opacity: 1;
+  &:hover {
+    .product-desc {
+      opacity: 1;
+    }
+  }
+  .product-image {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
+  }
+  .product-desc {
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }
+  .product-title {
+    color: map-get($colors, black-b);
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+  }
+}

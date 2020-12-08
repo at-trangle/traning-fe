@@ -1,4 +1,16 @@
 .section-title {
+  @include pxRem(font-size, 18);
+  @include pxRem(letter-spacing, 2);
   font-family: map-get($font-family, montserrat);
-  font-family: map-get($font-family, roboto);
+  color: map-get($colors, txt-black);
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+}
+.section-desc {
+  @include pxRem(font-size, 13);
+  @include pxRem(line-height, 28);
+  font-family: map-get($font-family, georgia);
+  color: map-get($colors, txt-black);
+  text-align: center;
 }
