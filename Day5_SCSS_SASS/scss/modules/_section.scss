@@ -1,11 +1,16 @@
+.page-main {
+  section {
+    @include pxRem(margin-bottom, 40);
+  }
+}
 .section-title {
   @include pxRem(font-size, 18);
-  @include pxRem(letter-spacing, 2);
   font-family: map-get($font-family, montserrat);
   color: map-get($colors, txt-black);
   text-transform: uppercase;
   position: relative;
   font-weight: bold;
+  text-align: center;
 }
 .section-desc {
   @include pxRem(font-size, 13);

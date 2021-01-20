@@ -1,0 +1,65 @@
+.page-footer {
+  @include pxRem(padding, 70 0 120);
+  background-color: map-get($colors, aqua);
+  .footer-top {
+    @include pxRem(padding-bottom, 50);
+    @include pxRem(margin-bottom, 2);
+    border-bottom: 1px solid map-get($colors, aqua-b);
+    h4 {
+      @include pxRem(font-size, 12);
+      @include pxRem(letter-spacing, 1);
+      @include pxRem(margin-bottom, 15);
+      @include pxRem(padding,10 0 0 20);
+      color: map-get($colors, aqua-a);
+      text-transform: uppercase;
+    }
+    .col-3 {
+      border-right: 1px solid map-get($colors, aqua-b);
+      &:last-child {
+        border-right: unset;
+      }
+      ul {
+        @include pxRem(padding-left, 20);
+        li {
+          @include pxRem(margin-bottom, 8);
+          a {
+            color: map-get($colors, aqua-a);
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .footer-logo {
+      transition: all 250ms ease-in-out 0s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .footer-bottom {
+    @include pxRem(padding-top, 35);
+    border-top: 1px solid map-get($colors, aqua-b);
+    p {
+      @include pxRem(margin-bottom, 25);
+      color: map-get($colors, aqua-a);
+      span {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .payment-list {
+      li {
+        @include pxRem(padding, 0 10);
+        img {
+          transition: all 250ms ease-in-out 0s;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

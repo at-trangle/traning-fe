@@ -1,0 +1,39 @@
+.slide-item {
+  position: relative;
+  img {
+    transition: all 250ms ease-in-out 0s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .slide-des {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    .slide-head {
+      @include pxRem(padding, 30 0);
+      @include pxRem(margin-bottom, 30);
+      @include pxRem(font-size, 64);
+      text-transform: uppercase;
+      font-weight: bold;
+      color: map-get($colors, white);
+    }
+    p {
+      @include pxRem(font-size, 14);
+      @include pxRem(padding, 30 0);
+      @include pxRem(margin-bottom, 30);
+      color: map-get($colors, white);
+      font-style: italic;
+    }
+    button {
+      border: unset;
+      &:hover {
+        background-color: map-get($colors, white !important);
+      }
+    }
+  }
+}

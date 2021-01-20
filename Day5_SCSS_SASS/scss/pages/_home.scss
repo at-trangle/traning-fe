@@ -1,0 +1,221 @@
+.page-main {
+  .section-slideshow {
+    .slideshow-content {
+      position: relative;
+      &:hover {
+        .slide-acions {
+          opacity: 1;
+        }
+      }
+      .slide-acions {
+        @include pxRem(padding, 0 100);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        opacity: 0;
+        transition: all 250ms ease-in-out 0s;
+        z-index: 2;
+        button {
+          @include pxRem(width, 80);
+          @include pxRem(height, 80);
+          border-radius: 50%;
+          border: 2px solid map-get($colors, white);
+          background-color: transparent;
+          outline: none;
+          i {
+            @include pxRem(font-size, 24);
+            color: map-get($colors, white);
+          }
+        }
+      }
+    }
+  }
+  .section-introduce {
+    h3 {
+      @include pxRem(font-size, 14);
+      @include pxRem(margin-bottom, 35);
+      @include pxRem(line-height, 24);
+      color: map-get($colors, txt-black);
+    }
+    .introduce-list {
+      li {
+        position: relative;
+        transition: all 250ms ease-in-out 0s;
+        &:hover {
+          opacity: 0.5;
+        }
+        span {
+          @include pxRem(padding, 10 0);
+          @include pxRem(font-size, 14);
+          @include pxRem(letter-spacing, 1);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: map-get($colors, white);
+          border-top: 2px solid map-get($colors, white);
+          border-bottom: 2px solid map-get($colors, white);
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .section-about-us {
+    margin-bottom: 0;
+    .section-title {
+      &:after {
+        @include pxRem(width, 100);
+        @include pxRem(height, 35);
+        @include pxRem(margin, 30 auto 25);
+        content: '';
+        background: url(assets/images/border-square.png) no-repeat;
+        display: block;
+      }
+    }
+  }
+  .section-product {
+    .section-title {
+      @include pxRem(margin, 40 0);
+    }
+    .product-list {
+      li {
+        @include pxRem(padding, 0 10);
+        @include pxRem(margin-bottom, 50);
+        width: 20%;
+      }
+    }
+    .btn-outline-gray {
+      @include pxRem(padding, 0 140);
+      @include pxRem(height, 45);
+      @include pxRem(line-height, 45);
+      display: block;
+      width: unset;
+      margin: 0 auto;
+    }
+  }
+  .section-banner {
+    @include pxRem(padding-top, 20);
+    .slide-item {
+      display: block !important;
+      .slide-head {
+        @include pxRem(font-size, 32);
+        @include pxRem(padding-bottom, 10);
+        margin-bottom: 0;
+        &:after {
+          @include pxRem(width, 32);
+          @include pxRem(height, 2);
+          @include pxRem(margin, 20 auto 0);
+          content: "";
+          background: map-get($colors, white);
+          display: block;
+        }
+      }
+    }
+  }
+  .section-brand {
+    @include pxRem(margin-bottom, 80);
+    .container {
+      position: relative;
+      .brand-list {
+        @include pxRem(margin, 0 35);
+        li {
+          width: 20%;
+          text-align: center;
+          img {
+            cursor: pointer;
+            transition: all 250ms ease-in-out 0s;
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+      button {
+        @include pxRem(width, 40);
+        @include pxRem(height, 40);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        border-radius: 50%;
+        background-color: transparent;
+        border: unset;
+        outline: none;
+        &:hover {
+          background-color: map-get($colors, gray-b);
+        }
+        i {
+          @include pxRem(font-size, 18);
+        }
+      }
+      .btn-previous {
+        @include pxRem(left, 20);
+      }
+      .btn-next {
+        @include pxRem(right, 20);
+      }
+    }
+  }
+  .section-newsletter {
+    @include pxRem(margin-bottom, 80);
+    .section-title-custom {
+      border-top: 1px solid map-get($colors, border-gray);
+      .section-title {
+        @include pxRem(font-size, 24);
+        transform: translateY(-50%);
+        span {
+          @include pxRem(padding, 0 10);
+          background-color: map-get($colors, white);
+        }
+        &:after {
+          @include pxRem(width, 100);
+          @include pxRem(height, 35);
+          content: '';
+          background: url(assets/images/border-square.png) no-repeat;
+          background-color: map-get($colors, white);
+          display: inline-block;
+        }
+        &:before {
+          @include pxRem(width, 100);
+          @include pxRem(height, 35);
+          content: '';
+          background: url(assets/images/border-square.png) no-repeat;
+          background-color: map-get($colors, white);
+          display: inline-block;
+        }
+      }
+    }
+    .section-desc {
+      @include pxRem(margin-bottom, 35);
+      font-style: italic;
+    }
+    .newsletter-form {
+      @include pxRem(max-width, 520);
+      @include pxRem(padding, 10);
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid map-get($colors, gray-a);
+      background: map-get($colors, white);
+      form {
+        position: relative;
+        input {
+          @include pxRem(padding, 10);
+          width: 100%;
+          border: unset;
+        }
+        button {
+          @include pxRem(padding, 0 25);
+          @include pxRem(letter-spacing, 1);
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          border: unset;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

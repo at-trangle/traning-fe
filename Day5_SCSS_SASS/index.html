@@ -3,225 +3,728 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 5 Traning SCSS</title>
+  <title>Avenues Shopify Template</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <header class="page-header">
+    <!-- logo responsive https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/icon-cc-paypal.png?v=11549633908869839674 -->
     <div class="header-top">
       <div class="container">
-        <select name="translate-language" id="translate-language" class="language-list">
-          <option value="aud">
-            <img src="" alt="language-item">
-            AUD
-          </option>
-          <option value="eur">
-            <img src="" alt="language-item">
-            EUR
-          </option>
-          <option value="gbp">
-            <img src="" alt="language-item">
-            GBP
-          </option>
-          <option value="usd" selected>
-            <img src="" alt="language-item">
-            USD
-          </option>
-        </select>
-        <ul class="header-actions">
-          <li><a href="/" class="active">WishList</a></li>
-          <li><a href="/">Login</a></li>
-          <li><a href="/">Sign Up</a></li>
-        </ul>
-        <ul class="socials">
-          <li>
-            <a href=""><i></i></a>
-          </li>
-          <li>
-            <a href=""><i></i></a>
-          </li>
-          <li>
-            <a href=""><i></i></a>
-          </li>
-          <li>
-            <a href=""><i></i></a>
-          </li>
-        </ul>
+        <div class="header-top-content row">
+          <div class="col-4">
+            <div class="select-language">
+              <div class="current-language">
+                <img src="assets/images/national-flags/usa.png" alt="current-language">
+                <span>USD</span>
+                <i class="fa fa-caret-down"></i>
+                <ul class="translate-list">
+                  <li>
+                    <img src="assets/images/national-flags/aud.png" alt="language-item">
+                    <span>AUD</span>
+                  </li>
+                  <li>
+                    <img src="assets/images/national-flags/eur.png" alt="language-item">
+                    <span>EUR</span>
+                  </li>
+                  <li>
+                    <img src="assets/images/national-flags/gbp.png" alt="language-item">
+                    <span>GBP</span>
+                  </li>
+                  <li>
+                    <img src="assets/images/national-flags/usa.png" alt="language-item">
+                    <span>USD</span>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-4">
+            <ul class="header-actions d-flex justify-center">
+              <li><a href="/" class="active">WishList</a></li>
+              <li><a href="/">Login</a></li>
+              <li><a href="/">Sign Up</a></li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul class="socials d-flex justify-end">
+              <li> 
+                <a href="/"><i class="fa fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="/"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="/"><i class="fa fa-google-plus"></i></a>
+              </li>
+              <li>
+                <a href="/"><i class="fa fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="header-middle">
       <div class="container">
-        <form class="form-search">
-          <input type="text" name="search" placeholder="search">
-          <button class="btn" type="submit">
-            <i></i>
-          </button>
-        </form>
-        <a href="/" class="logo">
-          <img src="" alt="header-logo">
-        </a>
-        <a href="/" class="cart-info">
-          <i></i>
-          <span>Cart</span>
-        </a>
+        <div class="header-middle-content">
+            <form class="form-search">
+              <input type="text" name="search" placeholder="search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <a href="/" class="header-logo">
+              <img src="assets/images/logo.png" alt="header-logo">
+            </a>
+            <a href="/" class="cart-info">
+              <i class="fa fa-shopping-cart"></i>
+              <span>Cart</span> (0)
+              <div class="dropdown-cart">
+                <p>It appears that your cart is currently empty!</p>
+                <button class="btn btn-outline-gray">Continue Shopping</button>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="header-nav">
-      <div class="container">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Shop</a></li>
-          <li><a href="/">Catalog</a></li>
-          <li><a href="/">Look Book</a></li>
-          <li><a href="/">Blog</a></li>
-          <li><a href="/">About</a></li>
-          <li><a href="/">Contact</a></li>
-          <li><a href="/">Theme Faqs</a></li>
-        </ul>
-      </div>
+      <ul class="d-flex menu-nav">
+        <li class="menu-item"><a href="/"><span>Home</span></a></li>
+        <li class="menu-item shop-menu"><a href="/">
+          <span>Shop</span>
+          <i class="fa fa-chevron-down"></i></a>
+          <ul class="dropdown-nav">
+            <li><a href="/"><span>Bibendumetos</span></a></li>
+            <li class="has-sub-nav">
+              <a href="/">
+                <span>Pellentes Habitanto</span>
+                <i class="fa fa-chevron-down dropdown-icon"></i>
+              </a>
+              <ul class="dropdown-nav sub-dropdown-nav">
+                <li><a href="/"><span>Raesent</span></a></li>
+                <li><a href="/"><span>Sedom</span></a></li>
+                <li><a href="/"><span>Scelerisque</span></a></li>
+              </ul>
+            </li>
+            <li><a href="/"><span>Senectus</span></a></li>
+            <li><a href="/"><span>Consequatod</span></a></li>
+            <li><a href="/"><span>Scelerisque Yurnas</span></a></li>
+            <li><a href="/"><span>Loremouticas</span></a></li>
+          </ul>
+        </li>
+        <li class="menu-item catelog-menu">
+          <a href="/">
+            <span>Catalog</span>
+            <i class="fa fa-chevron-down"></i>
+            <div class="label label-new">
+              <span>new</span>
+              <div></div>
+            </div>
+          </a>
+          <div class="mega-menu">
+            <div class="container">
+              <div class="row">
+                <div class="col-3">
+                  <h3><a href="/">Comos de milano</a></h3>
+                  <ul>
+                    <li><a href="/">Dincidunteros</a></li>
+                    <li>
+                      <a href="/">
+                        <span>Loremous</span>
+                        <i class="fa fa-chevron-down"></i>
+                      </a>
+                    </li>
+                    <li><a href="/">Comodianos</a></li>
+                    <li><a href="/">Gravidas</a></li>
+                    <li><a href="/">Montemous</a></li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <h3><a href="/">Nor Loremirus</a></h3>
+                  <ul>
+                    <li><a href="/">Bibendumetos</a></li>
+                    <li>
+                      <a href="/">
+                        <span>Pellentes Habitanto</span>
+                        <i class="fa fa-chevron-down"></i>
+                      </a>
+                    </li>
+                    <li><a href="/">Senectus</a></li>
+                    <li><a href="/">Consequatod</a></li>
+                    <li><a href="/">Scelerisque Yurnas</a></li>
+                    <li><a href="/">Loremouticas</a></li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <h3><a href="/">Accéssorius </a></h3>
+                  <ul>
+                    <li><a href="/">Dincidunteros</a></li>
+                    <li><a href="/">Nectellus</a></li>
+                    <li><a href="/">Solutmades</a></li>
+                    <li><a href="/">Loremous Comodous</a></li>
+                    <li><a href="/">Namdos Hempus</a></li>
+                  </ul>
+                </div>
+                <div class="col-3 text-center">
+                  <a href="/">
+                    <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/menu-instagram.png?v=17398132229502778659" alt="come-in">
+                  </a>
+                  <p>Custom CMS block displayed in Mega Menu. Put your own content here: text, html, images, media... or whatever you like.</p>
+                  <p>There are many similar sample content placeholders across the store. All editable from Shopify Admin Panel.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item"><a href="/"><span>Look Book</span></a></li>
+        <li class="menu-item"><a href="/"><span>Blog</span></a></li>
+        <li class="menu-item"><a href="/"><span>About</span></a></li>
+        <li class="menu-item"><a href="/"><span>Contact</span></a></li>
+        <li class="menu-item"><a href="/"><span>Theme Faqs</span></a></li>
+      </ul>
     </div>
   </header>
   <main class="page-main">
     <section class="section-slideshow">
-      <div class="container">
-        <ul>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
+      <div class="container slideshow-content">
+        <ul class="slide-show">
+          <li class="slide-item">
+            <a href="/">
+              <img src="assets/images/slideshow_1.jpg" alt="slide-item">
+            </a>
+            <div class="slide-des">
+              <h2 class="slide-head">Loremous Mitos</h2>
+              <p>Nulla ornare dictum mauris dan meleifend nulla lacinias loremous an comodous</p>
+              <button class="btn btn-white">Shop Collections</button>
+            </div>
+          </li>
+          <li class="slide-item">
+            <a href="/">
+              <img src="assets/images/slideshow_2.jpg" alt="slide-item">
+            </a>
+          </li>
+          <li class="slide-item">
+            <a href="/">
+              <img src="assets/images/slideshow_3.jpg" alt="slide-item">
+            </a>
+            <div class="slide-des">
+              <h2 class="slide-head">natibus magoz</h2>
+              <p>Phasellus fringilla malesuada ligula pulvinar commodo maecenas suscipit auctor sodales an comodous</p>
+              <button class="btn btn-white">Shop Collections</button>
+            </div>
+          </li>
         </ul>
+        <div class="slide-acions d-flex justify-between">
+          <button class="btn btn-previous" onclick="plusDivs(-1)"><i class="fa fa-chevron-left"></i></button>
+          <button class="btn btn-next" onclick="plusDivs(1)"><i class="fa fa-chevron-right"></i></button>
+        </div>
       </div>
     </section>
     <section class="section-introduce">
       <div class="container">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <ul class="product-list">
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
+        <h3 class="text-center">FREE SHIPPING WORLDWIDE. NO MINIMUM OURCHASE REQUIRED.</h3>
+        <ul class="introduce-list row">
+          <li class="col-4">
+            <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/top-banner-home-1.jpg?v=17130988451467614323" alt="product-item"></a>
+            <span>Accessories</span>
+          </li>
+          <li class="col-4">
+            <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/top-banner-home-2.jpg?v=14940262061398994672" alt="product-item"></a>
+            <span>Women Clothing</span>
+          </li>
+          <li class="col-4">
+            <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/top-banner-home-3.jpg?v=16130227677303056630" alt="product-item"></a>
+            <span>Shoes</span>
+          </li>
         </ul>
       </div>
     </section>
     <sectiom class="section-about-us">
       <div class="container">
-        <h2 class="section-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p class="section-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, obcaecati earum. Voluptatibus suscipit reiciendis veniam cupiditate, dolores sit repellendus labore amet adipisci saepe accusamus fuga perspiciatis modi dolorem cum facilis!</p>
-      </div>
+        <div class="inner">
+          <h2 class="section-title">AVENUE DE BOUTIQUE</h2>
+          <p class="section-desc">Phasellus fringilla malesuada ligula pulvinar commodo maecenas suscipit auctor sodales an comodous. Divamus consectetur nisl vel ante consectetur sodales. Class aptent tacitis litora torquent lorem an conubia der inceptos himenaeos. Avenue - Responsive Online Fashion Store for Shopify.</p>
+        </div>
+       </div>
     </sectiom>
     <section class="section-product">
       <div class="container">
-        <ul class="product-list">
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
+        <h2 class="section-title">FEATURED PRODUCTS</h2>
+        <ul class="product-list row">
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/0085040800_1_1_1_large.jpeg?v=1407393790" alt=""></a>
+              </div>
+              <span class="label">sale</span>
+              <div class="product-countdown">
+                <span>Limited-Time Offers</span>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Select options</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/01_f38119a3-3a93-45a3-b5a7-bc8fbcce5b8b_large.jpg?v=1410345617" alt=""></a>
+              </div>
+              <span class="label">sale</span>
+              <div class="product-countdown">
+                <span>Limited-Time Offers</span>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Select options</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/0387222251_1_1_1_7dedf97a-93dd-4808-86ff-3488865b1246_large.jpeg?v=1407393778" alt=""></a>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Add to cart</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/2627168614_1_1_1_large.jpeg?v=1407393775" alt=""></a>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Add to cart</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/1165223251_1_1_1_71c1fcce-7e6d-42d6-be0a-a421ab2f7cd8_large.jpeg?v=1407393767" alt=""></a>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Select options</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/2627168614_1_1_1_e019a536-21ac-4bbc-8e3f-59efbd5466b8_large.jpeg?v=1407393764" alt=""></a>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Select options</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/5618050250_1_1_1_large.jpeg?v=1407393762" alt=""></a>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Add to cart</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/06_large.jpg?v=1410344623" alt=""></a>
+              </div>
+              <span class="label">sale</span>
+              <div class="product-countdown">
+                <span>Limited-Time Offers</span>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Select options</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/5618038112_1_1_1_64fdd0fe-7d2b-4acb-885f-3d01f01ce77b_large.jpeg?v=1407393755" alt=""></a>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Add to cart</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <div class="product-image">
+                <a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/products/0264221250_1_1_1_large.jpg?v=1407395011" alt=""></a>
+              </div>
+              <div class="product-desc">
+                <div class="btn-top">
+                  <button class="btn btn-circle">
+                    <i class="fa fa-eye icon"></i>
+                    <i class="fa fa-eye icon-hover"></i>
+                  </button>
+                  <button class="btn btn-circle">
+                    <i class="fa fa-heart icon"></i>
+                    <i class="fa fa-heart icon-hover"></i>
+                  </button>
+                </div>
+                <a href="/" class="product-title">Combined with a handful of model</a>
+                <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+                </div>
+                <div class="product-price">
+                  <strong class="old-price">$90.00</strong>
+                  <span>from</span>
+                  <strong class="new-price">$50.00</strong>
+                </div>
+                <button class="btn btn-violet">Select options</button>
+              </div>
+            </div>
+          </li>
         </ul>
-        <button class="btn btn-primary">Show more</button>
+        <button class="btn btn-outline-gray">Show more</button>
       </div>
     </section>
     <section class="section-banner">
       <div class="container">
-        <ul class="banner-list">
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
+        <ul class="banner-list row">
+          <li class="col-6 slide-item">
+            <a href="/">
+              <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/banner-home-bottom-1.jpg?v=7797526581126766162" alt="banner-item">
+            </a>
+            <div class="slide-des">
+              <h2 class="slide-head">bags & Purses</h2>
+              <p>Cras porta purus eu gravida facilisis. Donec blandit<br> ligula eu neque dapibus at eleifend nunc sagittis</p>
+              <button class="btn btn-white">Browse the Feature</button>
+            </div>
+          </li>
+          <li class="col-6 slide-item">
+            <a href="/">
+              <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/banner-home-bottom-2.jpg?v=4477743673293295392" alt="banner-item">
+            </a>
+            <div class="slide-des">
+              <h2 class="slide-head">Look of the day</h2>
+              <p>Cras porta purus eu gravida facilisis. Donec blandit ligula<br> eu neque dapibus at eleifend nunc sagittis</p>
+              <button class="btn btn-white">Browse the Feature</button>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
-    <section class="section-brand-">
+    <section class="section-brand">
       <div class="container">
-        <ul class="brand-list">
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
-          <li><a href=""><img src="" alt=""></a></li>
+        <ul class="brand-list row">
+          <li><a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/brand1.png?v=8160181011730950010" alt=""></a></li>
+          <li><a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/brand2.png?v=16233797972398226750" alt=""></a></li>
+          <li><a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/brand3.png?v=10091065983958763936" alt=""></a></li>
+          <li><a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/brand4.png?v=14621772107252838773" alt=""></a></li>
+          <li><a href=""><img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/brand5.png?v=10466927545464029637" alt=""></a></li>
         </ul>
-        <button class="btn btn-previous"><i></i></button>
-        <button class="btn btn-next"><i></i></button>
+        <button class="btn btn-previous"><i class="fa fa-chevron-left"></i></button>
+        <button class="btn btn-next"><i class="fa fa-chevron-right"></i></button>
       </div>
     </section>
     <section class="section-newsletter">
       <div class="container">
-        <h2 class="section-title">Get The Lastest</h2>
-        <p class="section-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum a neque cum, corporis sint nisi laudantium exercitationem maiores.</p>
-        <form class="newsletter-form">
-          <input type="text" placeholder="your-email@shopify.com">
-          <button type="submit">Subcrible</button>
-        </form>
+        <div class="section-title-custom">
+          <div class="section-title d-flex justify-center"><span>Get The Lastest</span></div>
+        </div>
+        <p class="section-desc">Sign up for our Newsletter</p>
+        <div class="newsletter-form">
+          <form>
+            <input type="text" placeholder="your-email@shopify.com">
+            <button class="btn btn-black" type="submit">Subcrible</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-top-col">
-          <a href="/">
-            <img src="" alt="check-out">
-          </a>
-        </div>
-        <div class="footer-top-col">
-          <h4>About Store</h4>
-          <ul>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-          </ul>
-        </div>
-        <div class="footer-top-col">
-          <h4>Customer Service</h4>
-          <ul>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-          </ul>
-        </div>
-        <div class="footer-top-col">
-          <h4>Legals</h4>
-          <ul>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-          </ul>
+        <div class="row">
+          <div class="col-3">
+            <a href="/">
+              <img class="footer-logo hover-opacity-0.5" src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/instagram.png?v=14469454799483916326" alt="check-out">
+            </a>
+          </div>
+          <div class="col-3">
+            <h4>About Store</h4>
+            <ul>
+              <li><a href="/">About Us</a></li>
+              <li><a href="/">Avenue Blog</a></li>
+              <li><a href="/">Partners</a></li>
+              <li><a href="/">Press Release</a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="/">Contact Us</a></li>
+              <li><a href="/">Help & FAQs</a></li>
+              <li><a href="/">Shipping Info & Returns</a></li>
+              <li><a href="/">Consultant</a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h4>Legals</h4>
+            <ul>
+              <li><a href="/">Cookies</a></li>
+              <li><a href="/">Terms & Conditions</a></li>
+              <li><a href="/">Returns Policy</a></li>
+              <li><a href="/">Other Information</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, ea dolores iste inventore excepturi repudiandae eaque, velit fuga veniam doloribus laudantium esse voluptas ullam aut temporibus cumque, voluptatem illum rem?</p>
-        <ul class="payment-list">
+      <div class="footer-bottom text-center">
+        <p>© 2013 Avenue Boutique. eCommerce Software by Shopify.<br><span>Shopify Themes & Templates</span> by <span>HaloThemes.com</span>.</p>
+        <ul class="payment-list d-flex justify-center">
           <li>
             <a href="/">
-              <img src="" alt="payment-item">
+              <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/icon-cc-visa.png?v=13431324648721909442" alt="payment-item">
             </a>
           </li>
           <li>
             <a href="/">
-              <img src="" alt="payment-item">
+              <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/icon-cc-mastercard.png?v=9821978880800793949" alt="payment-item">
             </a>
           </li>
           <li>
             <a href="/">
-              <img src="" alt="payment-item">
+              <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/icon-cc-american-express.png?v=10476627455322508614" alt="payment-item">
             </a>
           </li>
           <li>
             <a href="/">
-              <img src="" alt="payment-item">
+              <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/icon-cc-discover.png?v=12964860147977044693" alt="payment-item">
             </a>
           </li>
           <li>
             <a href="/">
-              <img src="" alt="payment-item">
+              <img src="https://cdn.shopify.com/s/files/1/0607/0977/t/19/assets/icon-cc-paypal.png?v=11549633908869839674" alt="payment-item">
             </a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
+  <script src="./slide.js"></script>
 </body>
 </html>

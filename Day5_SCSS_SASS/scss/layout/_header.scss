@@ -1,0 +1,286 @@
+.page-header {
+  .header-top {
+    .header-top-content {
+      @include pxRem(padding, 15 0);
+      border-bottom: 1px solid map-get($colors, border-gray);
+      .select-language {
+        position: relative;
+        &:hover {
+          .translate-list {
+            opacity: 1;
+          }
+        }
+        img {
+          @include pxRem(width, 20);
+          @include pxRem(height, 15);
+        }
+        .current-language, .translate-list li {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          span {
+            @include pxRem(padding, 0 5);
+          }
+        }
+        .translate-list {
+          @include pxRem(padding, 5 0);
+          @include pxRem(top, 20);
+          position: absolute;
+          left: 0;
+          border: 1px solid map-get($colors, border-gray);
+          background-color: map-get($colors, white);
+          z-index: 1;
+          opacity: 0;
+          li {
+            @include pxRem(padding, 5 10);
+            transition: all 250ms ease-in-out 0s;
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+      .header-actions {
+        a {
+          @include pxRem(font-size, 12);
+          @include pxRem(padding, 0 5);
+          color: map-get($colors, txt-gray);
+          text-transform: uppercase;
+          &:after {
+            @include pxRem(padding-left, 8);
+            content: '/';
+            display: inline;
+          }
+        }
+        li {
+          &:last-child {
+            a {
+              &:after {
+                content: '';
+                display: inline;
+              }
+            }
+          }
+        }
+        
+      }
+      .socials {
+        li {
+          @include pxRem(padding-left, 10);
+          i {
+            @include pxRem(font-size, 16);
+            transition: all 250ms ease-in-out 0s;
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header-middle {
+    .header-middle-content {
+      @include pxRem(padding, 30 0);
+      @include pxRem(height, 160);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid map-get($colors, border-gray);
+      position: relative;
+      .form-search {
+        position: relative;
+        // padding-left: 15px;
+        // padding: 10px 50px 10px 15px;
+        input {
+          @include pxRem(width, 230);
+          @include pxRem(height, 20);
+          @include pxRem(font-size, 12);
+          @include pxRem(padding, 20);
+          background-color: map-get($colors, bg-blue-light);
+          color: map-get($colors, txt-gray);
+          border: 1px solid transparent;
+          text-transform: uppercase;
+        }
+        button {
+          @include pxRem(right, 10);
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: unset;
+          border: none;
+          background-color: transparent;
+          color: map-get($colors, txt-gray);
+        }
+      }
+      .header-logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        img {
+          transition: all 250ms ease-in-out 0s;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      .cart-info {
+        @include pxRem(font-size, 16);
+        color: map-get($colors, txt-gray);
+        position: relative;
+        &:hover {
+          .dropdown-cart {
+            opacity: 1;
+            @include pxRem(padding, 20);
+            @include pxRem(height, 110);
+          }
+        }
+        i {
+          @include pxRem(font-size, 20);
+          @include pxRem(padding-right, 10);
+        }
+        span {
+          text-transform: uppercase;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .dropdown-cart {
+          opacity: 0;
+          height: 0;
+          padding: 0 20px;
+          transition: all .4s ease-in-out;
+          @include pxRem(width, 330);
+          @include pxRem(top, 25);
+          position: absolute;
+          right: 0;
+          border: 1px solid map-get($colors, gray-c);
+          background: map-get($colors, white);
+          z-index: 1;
+          p {
+            @include pxRem(margin-bottom, 10);
+            @include pxRem(font-size, 14);
+            color: map-get($colors, txt-black);
+          }
+          .btn {
+            @include pxRem(padding, 10 20);
+          }
+        }
+      }
+    }
+  }
+  .header-nav {
+    .menu-nav {
+      justify-content: center;
+      .menu-item {
+        > a {
+          @include pxRem(padding, 15 12);
+          @include pxRem(font-size, 13);
+          text-transform: uppercase;
+          display: block;
+          &:hover {
+            > span {
+              border-bottom: 2px solid map-get($colors, txt-black);
+            }
+          }
+          i {
+            @include pxRem(padding-left, 8);
+          }
+        }
+      }
+      .shop-menu {
+        position: relative;
+        &:hover {
+          > .dropdown-nav {
+            display: block;
+          }
+        }
+      }
+      .catelog-menu {
+        position: static;
+        &:hover {
+          .mega-menu {
+            display: block;
+            // opacity: 1;
+          }
+        }
+        a {
+          position: relative;
+          &:hover {
+            color: map-get($colors, white);
+            background-color: map-get($colors, txt-black);
+            > span {
+              border-bottom: 2px solid map-get($colors, white);
+            }
+          }
+          .label-new {
+            position: absolute;
+            background-color: map-get($colors, danger-a);
+            color: map-get($colors, white);
+            top: -30%;
+            right: 0;
+            span {
+              font-style: italic;
+            }
+            div {
+              @include pxRem(bottom, -6);
+              @include pxRem(border-left, 6 solid transparent);
+              @include pxRem(border-right, 6 solid transparent);
+              @include pxRem(border-top, 6 solid map-get($colors, danger-a));
+              width: 0;
+              height: 0;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+        
+        
+      }
+    }
+    .mega-menu {
+      @include pxRem(padding, 35 0 60);
+      background-color: map-get($colors, black-c);
+      color: map-get($colors, txt-light);
+      display: none;
+      width: 100%;
+      border: 0;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      h3 {
+        @include pxRem(font-size, 13);
+        @include pxRem(padding-bottom, 20);
+        @include pxRem(margin-bottom, 15);
+        border-bottom: 1px solid map-get($colors, white-a);
+        text-transform: uppercase;
+        a {
+          color: map-get($colors, white);
+        }
+      }
+      ul {
+        li{
+          @include pxRem(padding, 10 0);
+          display: block;
+          a {
+            color: map-get($colors, txt-light);
+            &:hover {
+              text-decoration: underline;
+              background-color: transparent !important;
+            }
+            i {
+              @include pxRem(margin-left, 20);
+            }
+          }
+        }
+      }
+      p {
+        @include pxRem(margin-bottom, 20);
+      }
+      img {
+        @include pxRem(margin, 5 0 20);
+      }
+    }
+  }
+}

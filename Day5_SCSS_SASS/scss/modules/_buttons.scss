@@ -1,22 +1,22 @@
 .btn {
   font-family: map-get($font-family, montserrat);
   @include pxRem(font-size, 12);
-  width: 100%;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s;
   &:hover {
-    transition: all 0.25s;
     border: none;
     text-shadow: none;
   }
 }
 .btn-outline-gray {
-  background-color: map-get($colors, white);
-  color: map-get($colors, border-gray);
-  border: 2px solid map-get($color, border-gray);
+  background-color: transparent;
+  color: map-get($colors, txt-gray);
+  border: 2px solid map-get($colors, txt-gray);
   &:hover {
-    background-color: map-get($colors, border-gray);
+    background-color: map-get($colors, txt-gray);
     color: map-get($colors, white);
-    border: 2px solid map-get($color, border-gray);
+    border: 2px solid map-get($colors, txt-gray);
   }
 }
 .btn-violet {

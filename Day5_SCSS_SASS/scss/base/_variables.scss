@@ -25,22 +25,32 @@ $breakpoints: (
 $colors: (
   primary: #333,
   white: #fff,
+  white-a: #3d4549,
   black: #000,
   black-a: #272e31,
   black-b: #20272a,
+  black-c: #273034,
   violet: #090939,
   gray: #3c3c3c,
+  gray-a: #c4cdcd,
+  gray-b: #eff2f2,
+  gray-c: #c5cacb,
   aqua: #cbeded,
+  aqua-a: #5d9494,
+  aqua-b: #a6e1e1,
   txt-black: #404e53,
-  txt-gray-dark: #66787f,
   txt-gray: #66787f,
+  txt-gray-a: #878e96,
+  txt-light: #a4a6a7,
   border-black: #333,
-  border-gray: #66787f,
+  border-gray: #d2d8db,
   border-gray-light: #878f92,
   bg-gray: #e9eaec,
   bg-gray-light: #f7f7f7,
+  bg-blue-light: #f4f6f7,
   danger: #f14d48,
-  danger-a: #e95144
+  danger-a: #e95144,
+  danger-b: #eb6256
 );
 
 // === z-index === //
@@ -55,7 +65,7 @@ $zindexs: (
 );
 
 // === Typography === //
-$font-size-base: 0.875rem !default; // 14px
+$font-size-base: 0.75rem !default; // 12px
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * .875 !default;
 

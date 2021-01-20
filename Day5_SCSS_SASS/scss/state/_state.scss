@@ -1,0 +1,69 @@
+.hover-opacity-0.5 {
+  transition: all 250ms ease-in-out 0s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.circle-element {
+  @include pxRem(width, 36);
+  @include pxRem(height, 36);
+  border-radius: 50%;
+  border: 1px solid map-get($colors, border-gray-light);
+  display: inline-block;
+  position: relative;
+  transition: all 0.25s;
+  &:hover {
+    background-color: map-get($colors, border-gray-light);
+  }
+  i {
+    color: map-get($colors, border-gray-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:hover {
+      background-color: map-get($colors, white);
+    }
+  }
+}
+.label {
+  @include pxRem(font-size, 11);
+  @include pxRem(padding, 1 5);
+  color: map-get($colors, danger-a);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid map-get($colors, danger-a);
+  background: map-get($colors, white);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  line-height: 1;
+  display: inline;
+}
+// flex box
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+// text style
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-under {
+  text-decoration: underline;
+}
+.text-bold {
+  font-weight: bold;
+}

@@ -1,0 +1,62 @@
+.dropdown-nav {
+  @include pxRem(width, 215);
+  border: 1px solid map-get($colors, gray-c);
+  background: map-get($colors, white);
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  z-index: 5;
+  padding: 0;
+  margin-bottom: 0;
+  li {
+    &:hover {
+      background: map-get($colors, bg-blue-light);
+      > a {
+        @include pxRem(padding-left, 40);
+        color: map-get($colors, txt-gray);
+        &:before {
+          @include pxRem(width, 16);
+          @include pxRem(left, 15);
+          height: 1px;
+          content: '';
+          background: map-get($colors, txt-gray);
+          position: absolute;
+          // top: 17px;
+          top: 50%;
+          // transition: all 0.5s ease 0s;
+        }
+      }
+    }
+    a {
+      @include pxRem(padding, 9 30 9 15);
+      display: block;
+      position: relative;
+      transition: all 0.5s ease 0s;
+      &:before {
+        content: '';
+        display: block;
+        transition: all 0.5s ease 0s;
+        width: 0;
+      }
+    }
+    .dropdown-icon {
+      @include pxRem(right, 15);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .has-sub-nav {
+    position: relative;
+    &:hover {
+      > .dropdown-nav {
+        display: block;
+      }
+    }
+    .sub-dropdown-nav {
+      left: 100%;
+      top: 0;
+    }
+  }
+}
